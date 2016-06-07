@@ -1,0 +1,22 @@
+hadoop fs -rm -r /user/cloudera/job3/input/crawl
+hadoop fs -put crawl /user/cloudera/job3/input
+
+
+
+hadoop fs -rm -r /user/cloudera/job3/output
+
+
+mkdir -p build
+
+javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/* Job3.java -d build -Xlint
+
+jar -cvf Job3.jar -C build/ . 
+
+hadoop jar Job3.jar org.myorg.Job3 /user/cloudera/job3/input /user/cloudera/job3/output
+
+
+
+hadoop fs -cat /user/cloudera/job3/output/*
+
+
+

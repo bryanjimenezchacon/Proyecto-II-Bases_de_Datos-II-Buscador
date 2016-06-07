@@ -1,0 +1,51 @@
+textarea{
+  resize:none;
+}
+
+textarea.form-control{
+  resize:none;
+  height:250px;
+  width:25%;
+}
+
+form{
+  align-self:center;
+}
+
+div{
+  text-align:center;
+}
+
+textarea.form-control{
+  display:inline-block;
+}
+
+button.btn.btn-default{
+  display:inline-block;
+}
+
+input.form-control{
+  display:inline-block;
+  width:60%;
+}
+
+button.btn.btn-default{
+  margin-top:5px;
+}
+
+img{
+  margin:10px;
+  height:25%;
+  width:25%;
+}
+
+button.btn.btn-default{
+}
+
+button.btn.btn-default{
+  margin:5px;
+}
+
+div{
+}
+

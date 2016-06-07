@@ -1,0 +1,8 @@
+mkdir -p build
+
+javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/* DatosJob3.java -d build -Xlint
+
+jar -cvf DatosJob3.jar -C build/ .
+
+hadoop jar DatosJob3.jar DatosJob3
+

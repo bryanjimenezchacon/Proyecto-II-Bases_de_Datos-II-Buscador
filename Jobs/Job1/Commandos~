@@ -1,0 +1,15 @@
+hadoop fs -rm -r /user/cloudera/job1/output
+
+
+
+mkdir -p build
+
+javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/* Job1.java -d build -Xlint
+
+jar -cvf Job1.jar -C build/ . 
+
+hadoop jar Job1.jar org.myorg.Job1 /user/cloudera/job1/input /user/cloudera/job1/output
+
+
+
+hadoop fs -cat /user/cloudera/job1/output/*
