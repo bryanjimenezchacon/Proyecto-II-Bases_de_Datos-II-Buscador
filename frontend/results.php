@@ -3,7 +3,7 @@
 //  echo "<script>window.alert('Error en query')</script>";
 //}
 $word = isset($_POST['query'])?$_POST['query']:"";
-$host = "localhost";
+$host = "localhost:3306";
 $user = "root";
 $password = "cloudera";
 $database = "proyecto";
@@ -23,7 +23,7 @@ else
     {
 	$construct = "";
         $construct .="Palabra LIKE '%$s%'";
-        $construct = " select Url, Titulo from job1 where $construct;";
+        $construct = " select Url, Titulo from job2 where $construct;";
         $run = mysql_query( $construct );
         $linksfound = mysql_num_rows($run);
         if ($linksfound == 0){
